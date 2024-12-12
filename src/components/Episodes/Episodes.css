@@ -1,0 +1,78 @@
+.episodes-container {
+  padding: 20px;
+  background-color: #2b2828;
+}
+
+.series-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  text-align: center;  
+}
+
+
+.series-description {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  text-align: center; 
+}
+
+
+.seasons-container {
+  margin-top: 30px;
+}
+
+
+.season {
+  margin-bottom: 20px;
+}
+
+
+.episodes-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+
+.episode-card {
+  width: 200px;
+  margin: 10px;
+  background-color: #000000;
+  padding: 10px;
+  text-align: center;
+  border-radius: 8px;
+  transition: transform 0.3s ease; 
+}
+
+.episode-card:hover {
+  transform: scale(1.05); 
+}
+
+
+.episode-card img {
+  width: 100%;
+  max-height: 150px;
+  object-fit: cover;
+  background-size: cover;
+  background-position: center;
+  border-radius: 8px;
+}
+
+
+.episode-title {
+  font-size: 1rem;
+  color: white;
+  margin-top: 10px;
+}
+
+
+.error-message {
+  color: red;
+  font-size: 1.5rem;
+  text-align: center; 
+}
+
+
+.series-link {
+  text-decoration: none;
+}

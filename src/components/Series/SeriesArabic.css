@@ -1,0 +1,76 @@
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212;
+    color: #fff;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .series-container {
+    padding: 50px 20px;
+    text-align: center;
+  }
+  
+  .page-title {
+    font-size: 3rem;
+    font-weight: bold;
+    margin-bottom: 40px;
+    color: #fff;
+  }
+  
+  .series-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    justify-content: center;
+  }
+  
+  .series-card {
+    background-color: #1c1c1c;
+    border-radius: 10px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  }
+  
+  .series-card:hover {
+    transform: scale(1.05);
+  }
+  
+  .series-image {
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+    transition: opacity 0.3s ease;
+  }
+  
+  .series-info {
+    padding: 20px;
+  }
+  
+  .series-title {
+    font-size: 1.8rem;
+    font-weight: bold;
+    margin: 10px 0;
+  }
+  
+  .series-description {
+    font-size: 1rem;
+    color: #ccc;
+    margin-bottom: 20px;
+  }
+  
+  .episodes-info {
+    padding: 10px;
+    background-color: #333;
+    border-radius: 5px;
+    margin-top: 10px;
+    color: #fff;
+  }
+  
+  .error-message {
+    color: red;
+    text-align: center;
+    margin-top: 20px;
+  }  
+  

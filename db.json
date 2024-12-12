@@ -1,0 +1,429 @@
+{
+  "users": [],
+
+  "moviesforeign": [
+    {
+      "id": "foreign-1",
+      "title": "Final Destination 2",
+      "description": "فيلم أكشن حول عملية سرقة في بغداد.",
+      "cat_prefix": "movies",
+      "img": "/moviteimg/Final Destination 2.jpeg",
+      "year": "2020",
+      "director": "أحمد خالد موسى",
+      "duration": "120 دقائق",
+      "video_url": "/moviesforeign/[EgyBest].Final.Destination.2.2003.BluRay.480p.x264.mp4"
+    }
+  ],
+  "moviesarabic": [
+    {
+      "id": "arabic-1",
+      "title": "لص بغداد",
+      "description": "فيلم أكشن حول عملية سرقة في بغداد.",
+      "cat_prefix": "movies",
+      "img": "/moviteimg/lsbghdad.jpeg",
+      "year": "2020",
+      "director": "أحمد خالد موسى",
+      "duration": "120 دقائق",
+      "video_url": "/moviesarabic/ls bghdad.mp4"
+    },
+    {
+      "id": "arabic-2",
+      "title": "بحبك",
+      "description": "فيلم رومانسي عن قصة حب معقدة.",
+      "cat_prefix": "movies",
+      "img": "/moviteimg/bhpek.jpeg",
+      "year": "2021",
+      "director": "حسين المنباوي",
+      "duration": "110 دقائق",
+      "video_url": "/moviesarabic/b7bk.mp4"
+    },
+    {
+      "id": "arabic-3",
+      "title": "العارف",
+      "description": "تدور أحداث الفيلم حول عملية سرقة إلكترونية عالمية.",
+      "cat_prefix": "movies",
+      "img": "/moviteimg/elaerf.jpeg",
+      "year": "2021",
+      "director": "أحمد علاء الديب",
+      "duration": "130 دقائق",
+      "video_url": "/moviesarabic/al3arf.mp4"
+    },
+    {
+      "id": "arabic-4",
+      "title": "اهواك",
+      "description": "فيلم رومانسي حول صراع بين الأمل والواقع.",
+      "cat_prefix": "movies",
+      "img": "/moviteimg/ahwak.jpeg",
+      "year": "2015",
+      "director": "حاتم علي",
+      "duration": "100 دقائق",
+      "video_url": "/moviesarabic/ahoak.mp4"
+    },
+    {
+      "id": "arabic-5",
+      "title": "الممر",
+      "description": "فيلم حربي عن بطولة الجيش المصري في حرب الاستنزاف.",
+      "cat_prefix": "movies",
+      "img": "/moviteimg/elmamer.jpeg",
+      "year": "2019",
+      "director": "شريف عرفة",
+      "duration": "135 دقائق",
+      "video_url": "/moviesarabic/almmr.mp4"
+    },
+    {
+      "id": "arabic-6",
+      "title": "تصبح علي خير",
+      "description": "فيلم كوميدي عن رجل يتعرض لمواقف غريبة بعد أن ينام لفترة طويلة.",
+      "cat_prefix": "movies",
+      "img": "/moviteimg/tasbeh.jpg",
+      "year": "2017",
+      "director": "عماد البهات",
+      "duration": "110 دقائق",
+      "video_url": "/moviesarabic/tsb7 3ly 5yr.mp4"
+    },
+    {
+      "id": "arabic-7",
+      "title": "عمهم",
+      "description": "فيلم درامي عن حياة رجل ينقلب مجرى حياته بعد الحوادث.",
+      "cat_prefix": "movies",
+      "img": "/moviteimg/3mhm.jpeg",
+      "year": "2022",
+      "director": "محمد امام",
+      "duration": "120 دقائق",
+      "video_url": "/moviesarabic/3mhm.mp4"
+    },
+    {
+      "id": "arabic-8",
+      "title": "مش انا",
+      "description": "فيلم درامي يتحدث عن شخصية شاب يعاني من مشكلة صحية تؤثر على حياته.",
+      "cat_prefix": "movies",
+      "img": "/moviteimg/mshana.jpeg",
+      "year": "2021",
+      "director": "سعيد الموجي",
+      "duration": "115 دقائق",
+      "video_url": "/moviesarabic/msh ana.mp4"
+    },
+    {
+      "id": "arabic-9",
+      "title": "ليلة هنا و سرور",
+      "description": "فيلم كوميدي عن حادثة تقع خلال ليلة غريبة.",
+      "cat_prefix": "movies",
+      "img": "/moviteimg/hanawsror.jpeg",
+      "year": "2019",
+      "director": "أحمد جلال",
+      "duration": "100 دقائق",
+      "video_url": "/moviesarabic/lylh hnaw sror.mp4"
+    },
+    {
+      "id": "arabic-10",
+      "title": "الخليه",
+      "description": "فيلم تشويقي عن وحدة مكافحة الإرهاب.",
+      "cat_prefix": "movies",
+      "img": "/moviteimg/elkhleyea.jpeg",
+      "year": "2017",
+      "director": "طارق العريان",
+      "duration": "125 دقائق",
+      "video_url": "/moviesarabic/al5lyh.mp4"
+    },
+    {
+      "id": "arabic-11",
+      "title": "البدله",
+      "description": "فيلم كوميدي عن مجموعة من الأصدقاء الذين يواجهون مواقف طريفة.",
+      "cat_prefix": "movies",
+      "img": "/moviteimg/albldlh.jpeg",
+      "year": "2018",
+      "director": "محمد علي",
+      "duration": "105 دقائق",
+      "video_url": "/moviesarabic/albldlh.mp4"
+    }
+  ],
+
+  "arabic_series": [
+    {
+      "id": "arabic-series-1",
+      "title": "حالة خاصة",
+      "img": "/moviteimg/7alh5ash.jpeg",
+      "description": "مسلسل درامي يتناول قضايا نفسية واجتماعية عن مجموعة من الأشخاص الذين يواجهون تحديات مختلفة.",
+      "seasons": [
+        {
+          "season_number": 1,
+          "episodes": [
+            {
+              "episode_number": 1,
+              "title": "الحلقة 1",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/7alh5ash/7alh5ash1.mp4",
+              "img": "/moviteimg/7alh5ash.jpeg"
+            },
+            {
+              "episode_number": 2,
+              "title": "الحلقة 2",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/7alh5ash/7alh5ash2.mp4",
+              "img": "/moviteimg/7alh5ash.jpeg"
+            },
+            {
+              "episode_number": 3,
+              "title": "الحلقة 3",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/7alh5ash/7alh5ash3.mp4",
+              "img": "/moviteimg/7alh5ash.jpeg"
+            },
+            {
+              "episode_number": 4,
+              "title": "الحلقة 4",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/7alh5ash/7alh5ash4.mp4",
+              "img": "/moviteimg/7alh5ash.jpeg"
+            },
+            {
+              "episode_number": 5,
+              "title": "الحلقة 5",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/7alh5ash/7alh5ash5.mp4",
+              "img": "/moviteimg/7alh5ash.jpeg"
+            },
+            {
+              "episode_number": 6,
+              "title": "الحلقة 6",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/7alh5ash/7alh5ash6.mp4",
+              "img": "/moviteimg/7alh5ash.jpeg"
+            },
+            {
+              "episode_number": 7,
+              "title": "الحلقة 7",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/7alh5ash/7alh5ash7.mp4",
+              "img": "/moviteimg/7alh5ash.jpeg"
+            },
+            {
+              "episode_number": 8,
+              "title": "الحلقة 8",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/7alh5ash/7alh5ash8.mp4",
+              "img": "/moviteimg/7alh5ash.jpeg"
+            },
+            {
+              "episode_number": 9,
+              "title": "الحلقة 9",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/7alh5ash/7alh5ash9.mp4",
+              "img": "/moviteimg/7alh5ash.jpeg"
+            },
+            {
+              "episode_number": 10,
+              "title": "الحلقة 10",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/7alh5ash/7alh5ash10.mp4",
+              "img": "/moviteimg/7alh5ash.jpeg"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "arabic-series-2",
+      "title": "موضوع عائلي",
+      "img": "/moviteimg/miewdos.jpeg",
+      "description": "مسلسل درامي كوميدي عائلي يروي قصة رجل يكتشف أنه أصبح مسؤولًا عن تربية ابنته الصغيرة بعد وفاة شقيقه، ويواجه تحديات كبيرة في حياته العائلية.",
+      "seasons": [
+        {
+          "season_number": 1,
+          "episodes": [
+            {
+              "episode_number": 1,
+              "title": "الحلقة 1",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/majadkedoani/episode1.mp4",
+              "img": "/moviteimg/miewdos.jpeg"
+            },
+            {
+              "episode_number": 2,
+              "title": "الحلقة 2",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/majadkedoani/episode2.mp4",
+              "img": "/moviteimg/miewdos.jpeg"
+            },
+            {
+              "episode_number": 3,
+              "title": "الحلقة 3",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/majadkedoani/episode3.mp4",
+              "img": "/moviteimg/miewdos.jpeg"
+            },
+            {
+              "episode_number": 4,
+              "title": "الحلقة 4",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/majadkedoani/episode4.mp4",
+              "img": "/moviteimg/miewdos.jpeg"
+            },
+            {
+              "episode_number": 5,
+              "title": "الحلقة 5",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/majadkedoani/episode5.mp4",
+              "img": "/moviteimg/miewdos.jpeg"
+            },
+            {
+              "episode_number": 6,
+              "title": "الحلقة 6",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/majadkedoani/episode6.mp4",
+              "img": "/moviteimg/miewdos.jpeg"
+            },
+            {
+              "episode_number": 7,
+              "title": "الحلقة 7",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/majadkedoani/episode7.mp4",
+              "img": "/moviteimg/miewdos.jpeg"
+            },
+            {
+              "episode_number": 8,
+              "title": "الحلقة 8",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/majadkedoani/episode8.mp4",
+              "img": "/moviteimg/miewdos.jpeg"
+            },
+            {
+              "episode_number": 9,
+              "title": "الحلقة 9",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/majadkedoani/episode9.mp4",
+              "img": "/moviteimg/miewdos.jpeg"
+            },
+            {
+              "episode_number": 10,
+              "title": "الحلقة 10",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/majadkedoani/episode10.mp4",
+              "img": "/moviteimg/miewdos.jpeg"
+            }
+          ]
+        },
+        {
+          "season_number": 2,
+          "episodes": [
+            {
+              "episode_number": 1,
+              "title": "الحلقة 1",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/majadkedoani/episode1.mp4",
+              "img": "/moviteimg/miewdos.jpeg"
+            },
+            {
+              "episode_number": 2,
+              "title": "الحلقة 2",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/majadkedoani/episode2.mp4",
+              "img": "/moviteimg/miewdos.jpeg"
+            },
+            {
+              "episode_number": 3,
+              "title": "الحلقة 3",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/majadkedoani/episode3.mp4",
+              "img": "/moviteimg/miewdos.jpeg"
+            },
+            {
+              "episode_number": 4,
+              "title": "الحلقة 4",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/majadkedoani/episode4.mp4",
+              "img": "/moviteimg/miewdos.jpeg"
+            },
+            {
+              "episode_number": 5,
+              "title": "الحلقة 5",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/majadkedoani/episode5.mp4",
+              "img": "/moviteimg/miewdos.jpeg"
+            },
+            {
+              "episode_number": 6,
+              "title": "الحلقة 6",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/majadkedoani/episode6.mp4",
+              "img": "/moviteimg/miewdos.jpeg"
+            },
+            {
+              "episode_number": 7,
+              "title": "الحلقة 7",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/majadkedoani/episode7.mp4",
+              "img": "/moviteimg/miewdos.jpeg"
+            },
+            {
+              "episode_number": 8,
+              "title": "الحلقة 8",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/majadkedoani/episode8.mp4",
+              "img": "/moviteimg/miewdos.jpeg"
+            },
+            {
+              "episode_number": 9,
+              "title": "الحلقة 9",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/majadkedoani/episode9.mp4",
+              "img": "/moviteimg/miewdos.jpeg"
+            },
+            {
+              "episode_number": 10,
+              "title": "الحلقة 10",
+              "duration": "45 دقائق",
+              "video_url": "/moviesarabic/majadkedoani/episode10.mp4",
+              "img": "/moviteimg/miewdos.jpeg"
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "turkish_series": [
+    {
+      "id": "turkish-series-1",
+      "title": "الملكة",
+      "description": "مسلسل درامي عن علاقة حب معقدة تنقلب حياتهم رأسًا على عقب.",
+      "img": "/moviteimg/malika.jpeg",
+      "year": "2021",
+      "director": "جونيت سيرغين",
+      "seasons": [
+        {
+          "season_number": 1,
+          "episodes": [
+            {
+              "episode_number": 1,
+              "title": "الحلقة 1",
+              "duration": "45 دقائق",
+              "video_url": "",
+              "img": "/moviteimg/malika.jpeg"
+            },
+            {
+              "episode_number": 2,
+              "title": "الحلقة 2",
+              "duration": "45 دقائق",
+              "video_url": "",
+              "img": "/moviteimg/malika.jpeg"
+            },
+            {
+              "episode_number": 3,
+              "title": "الحلقة 3",
+              "duration": "45 دقائق",
+              "video_url": "",
+              "img": "/moviteimg/malika.jpeg"
+            },
+            {
+              "episode_number": 4,
+              "title": "الحلقة ",
+              "duration": "45 دقائق",
+              "video_url": "",
+              "img": "/moviteimg/malika.jpeg"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
