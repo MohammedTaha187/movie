@@ -8,7 +8,7 @@ export default function Episodes() {
   const [series, setSeries] = useState(null);
   const [error, setError] = useState(null);
 
-  const BASE_URL = "https://fb10b4b0-baad-476b-995c-8303930d406d-00-dres0smrwl7g.spock.replit.dev";
+  const BASE_URL = "http://localhost:5001";
 
   useEffect(() => {
     const endpoint = id.includes('turkish') 
