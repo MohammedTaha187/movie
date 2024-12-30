@@ -9,7 +9,7 @@ export default function SeriesTurkish() {
 
   useEffect(() => {
     axios
-      .get("https://fb10b4b0-baad-476b-995c-8303930d406d-00-dres0smrwl7g.spock.replit.dev/turkish_series")
+      .get("http://localhost:5001/turkish_series")
       .then((response) => {
         setSeries(response.data);
       })
@@ -47,7 +47,7 @@ export default function SeriesTurkish() {
               <div
                 className="series-image"
                 style={{
-                  backgroundImage: `url(https://fb10b4b0-baad-476b-995c-8303930d406d-00-dres0smrwl7g.spock.replit.dev${
+                  backgroundImage: `url(http://localhost:5001${
                     serie.img || "/images/default-image.jpg"
                   })`,
                 }}

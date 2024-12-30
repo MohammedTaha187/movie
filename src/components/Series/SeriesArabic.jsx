@@ -9,7 +9,7 @@ export default function SeriesArabic() {
 
   useEffect(() => {
     axios
-      .get("https://fb10b4b0-baad-476b-995c-8303930d406d-00-dres0smrwl7g.spock.replit.dev/arabic_series")
+      .get("http://localhost:5001/arabic_series")
       .then((response) => {
         setSeries(response.data);
       })
@@ -37,7 +37,7 @@ export default function SeriesArabic() {
               <div
                 className="series-image"
                 style={{
-                  backgroundImage: `url(https://fb10b4b0-baad-476b-995c-8303930d406d-00-dres0smrwl7g.spock.replit.dev${serie.img})`,
+                  backgroundImage: `url(http://localhost:5001${serie.img})`,
                 }}
               ></div>
             </Link>

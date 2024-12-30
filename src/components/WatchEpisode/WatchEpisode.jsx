@@ -11,8 +11,8 @@ export default function WatchEpisode() {
 
   useEffect(() => {
     let endpoint = type === "arabic"
-      ? `https://fb10b4b0-baad-476b-995c-8303930d406d-00-dres0smrwl7g.spock.replit.dev/arabic_series/${id}`
-      : `https://fb10b4b0-baad-476b-995c-8303930d406d-00-dres0smrwl7g.spock.replit.dev/turkish_series/${id}`;
+      ? `http://localhost:5001/arabic_series/${id}`
+      : `http://localhost:5001/turkish_series/${id}`;
 
     axios
       .get(endpoint)
@@ -44,7 +44,7 @@ export default function WatchEpisode() {
       <div
         className="episode-header"
         style={{
-          backgroundImage: `url(https://fb10b4b0-baad-476b-995c-8303930d406d-00-dres0smrwl7g.spock.replit.dev${episode.img || "/images/default-image.jpg"})`,
+          backgroundImage: `url(http://localhost:5001${episode.img || "/images/default-image.jpg"})`,
         }}
       >
         <div className="overlay"></div>
@@ -57,7 +57,7 @@ export default function WatchEpisode() {
       <div className="episode-content">
         <div className="video-container">
           <video ref={videoRef} key={episode_number} controls>
-            <source src={`https://fb10b4b0-baad-476b-995c-8303930d406d-00-dres0smrwl7g.spock.replit.dev${episode.video_url}`} type="video/mp4" />
+            <source src={`http://localhost:5001${episode.video_url}`} type="video/mp4" />
             متصفحك لا يدعم علامة الفيديو.
           </video>
         </div>
@@ -75,7 +75,7 @@ export default function WatchEpisode() {
                 <div className="episode-card" key={ep.episode_number}>
                   <Link to={`/watch/${type}/${id}/episode/${season_number}/${ep.episode_number}`}>
                     <img
-                      src={`https://fb10b4b0-baad-476b-995c-8303930d406d-00-dres0smrwl7g.spock.replit.dev${ep.img || "/images/default-image.jpg"}`}
+                      src={`http://localhost:5001${ep.img || "/images/default-image.jpg"}`}
                       alt={ep.title}
                       className="episode-image"
                     />

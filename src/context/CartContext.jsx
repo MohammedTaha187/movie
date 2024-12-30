@@ -5,7 +5,7 @@ import { toast } from "react-hot-toast";
 export let CartContext = createContext();
 
 const API_BASE_URL =
-  "https://de20c983-e204-41ff-8ac8-ff32b1e8b12f-00-3anh942776nda.picard.replit.dev";
+  "http://localhost:5001";
 
 function addToCart(product) {
   return axios

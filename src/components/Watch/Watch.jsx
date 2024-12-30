@@ -13,15 +13,15 @@ export default function Watch() {
 
     if (type === "movie") {
       if (id.startsWith("foreign-")) {
-        endpoint = `https://fb10b4b0-baad-476b-995c-8303930d406d-00-dres0smrwl7g.spock.replit.dev/moviesforeign/${id}`;
+        endpoint = `http://localhost:5001/moviesforeign/${id}`;
       } else {
-        endpoint = `https://fb10b4b0-baad-476b-995c-8303930d406d-00-dres0smrwl7g.spock.replit.dev/moviesarabic/${id}`;
+        endpoint = `http://localhost:5001/moviesarabic/${id}`;
       }
     } else if (type === "series") {
       if (id.includes("turkish")) {
-        endpoint = `https://fb10b4b0-baad-476b-995c-8303930d406d-00-dres0smrwl7g.spock.replit.dev/turkish_series/${id}`;
+        endpoint = `http://localhost:5001/turkish_series/${id}`;
       } else {
-        endpoint = `https://fb10b4b0-baad-476b-995c-8303930d406d-00-dres0smrwl7g.spock.replit.dev/arabic_series/${id}`;
+        endpoint = `http://localhost:5001/arabic_series/${id}`;
       }
     }
 
@@ -49,7 +49,7 @@ export default function Watch() {
       <div
         className="movie-header"
         style={{
-          backgroundImage: `url(https://fb10b4b0-baad-476b-995c-8303930d406d-00-dres0smrwl7g.spock.replit.dev${item.img})`,
+          backgroundImage: `url(http://localhost:5001${item.img})`,
         }}
       >
         <div className="overlay"></div>
@@ -63,7 +63,7 @@ export default function Watch() {
         {type === "movie" && item.video_url && (
           <div className="video-container">
             <video controls>
-              <source src={`https://fb10b4b0-baad-476b-995c-8303930d406d-00-dres0smrwl7g.spock.replit.dev${item.video_url}`} type="video/mp4" />
+              <source src={`http://localhost:5001${item.video_url}`} type="video/mp4" />
               متصفحك لا يدعم وسم الفيديو.
             </video>
           </div>

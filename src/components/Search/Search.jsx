@@ -12,16 +12,16 @@ function Search() {
     const fetchData = async () => {
       try {
         const moviesArabicResponse = await axios.get(
-          `https://fb10b4b0-baad-476b-995c-8303930d406d-00-dres0smrwl7g.spock.replit.dev/moviesarabic`
+          `http://localhost:5001/moviesarabic`
         );
         const moviesForeignResponse = await axios.get(
-          `https://fb10b4b0-baad-476b-995c-8303930d406d-00-dres0smrwl7g.spock.replit.dev/moviesforeign`
+          `http://localhost:5001/moviesforeign`
         );
         const arabicSeriesResponse = await axios.get(
-          `https://fb10b4b0-baad-476b-995c-8303930d406d-00-dres0smrwl7g.spock.replit.dev/arabic_series`
+          `http://localhost:5001/arabic_series`
         );
         const turkishSeriesResponse = await axios.get(
-          `https://fb10b4b0-baad-476b-995c-8303930d406d-00-dres0smrwl7g.spock.replit.dev/turkish_series`
+          `http://localhost:5001/turkish_series`
         );
 
         if (query) {
@@ -112,7 +112,7 @@ function Search() {
                 className="card-link"
               >
                 <img
-                  src={`https://fb10b4b0-baad-476b-995c-8303930d406d-00-dres0smrwl7g.spock.replit.dev${item.img}`}
+                  src={`http://localhost:5001${item.img}`}
                   alt={item.title}
                   className="card-img"
                 />

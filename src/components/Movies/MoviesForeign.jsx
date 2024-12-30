@@ -9,7 +9,7 @@ export default function MoviesForeign() {
 
   useEffect(() => {
     axios
-      .get("https://fb10b4b0-baad-476b-995c-8303930d406d-00-dres0smrwl7g.spock.replit.dev/moviesforeign")
+      .get("http://localhost:5001/moviesforeign")
       .then((response) => {
         setMovies(response.data);
       })
@@ -35,7 +35,7 @@ export default function MoviesForeign() {
           <div className="movie-card" key={movie.id}>
             <Link to={`/watch/movie/${movie.id}`} className="movie-link">
               <img
-                src={`https://fb10b4b0-baad-476b-995c-8303930d406d-00-dres0smrwl7g.spock.replit.dev${movie.img}`}
+                src={`http://localhost:5001${movie.img}`}
                 alt={movie.title}
                 className="movie-img"
               />
