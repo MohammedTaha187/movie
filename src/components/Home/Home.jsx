@@ -11,7 +11,7 @@ export default function Home() {
   const [error, setError] = useState(null);
 
   // استخدام رابط السيرفر المستضاف على Replit
-  const BASE_URL = "https://fb10b4b0-baad-476b-995c-8303930d406d-00-dres0smrwl7g.spock.replit.dev";
+  const BASE_URL = "http://localhost:5001";
 
   useEffect(() => {
     axios
