@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+import data from "../../../db.json"; // تأكد من المسار الصحيح للملف
 import { Link } from "react-router-dom";
 import "./SeriesArabic.css";
 
@@ -8,15 +8,11 @@ export default function SeriesArabic() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5001/arabic_series")
-      .then((response) => {
-        setSeries(response.data);
-      })
-      .catch((error) => {
-        setError("There was an error fetching the series.");
-        console.error("There was an error fetching the series:", error);
-      });
+    if (data) {
+      setSeries(data.arabic_series);  // تأكد أن 'arabic_series' موجود في db.json
+    } else {
+      setError("There was an error loading the series data.");
+    }
   }, []);
 
   if (error) {
@@ -37,7 +33,7 @@ export default function SeriesArabic() {
               <div
                 className="series-image"
                 style={{
-                  backgroundImage: `url(http://localhost:5001${serie.img})`,
+                  backgroundImage: `url(${serie.img})`, // تأكد أن 'img' في db.json هو المسار الصحيح
                 }}
               ></div>
             </Link>

@@ -1,57 +1,25 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
+import data from "../../../db.json";  // استيراد البيانات من db.json
 import "./Home.css";
 
 export default function Home() {
   const [movies, setMovies] = useState([]);
-  const [arabicSeries, setArabicSeries] = useState([]); 
+  const [arabicSeries, setArabicSeries] = useState([]);
   const [turkishSeries, setTurkishSeries] = useState([]);
   const [moviesForeign, setMoviesForeign] = useState([]);
   const [error, setError] = useState(null);
 
-  const BASE_URL = "http://localhost:5001";
-
   useEffect(() => {
-    axios
-      .get(`${BASE_URL}/moviesarabic`)
-      .then((response) => {
-        setMovies(response.data);
-      })
-      .catch((error) => {
-        setError("There was an error fetching the movies.");
-        console.error("There was an error fetching the movies:", error);
-      });
-
-    axios
-      .get(`${BASE_URL}/arabic_series`)
-      .then((response) => {
-        setArabicSeries(response.data); 
-      })
-      .catch((error) => {
-        setError("There was an error fetching the arabic series.");
-        console.error("There was an error fetching the arabic series:", error);
-      });
-
-    axios
-      .get(`${BASE_URL}/moviesforeign`)
-      .then((response) => {
-        setMoviesForeign(response.data);
-      })
-      .catch((error) => {
-        setError("There was an error fetching the foreign movies.");
-        console.error("There was an error fetching the foreign movies:", error);
-      });
-
-    axios
-      .get(`${BASE_URL}/turkish_series`)
-      .then((response) => {
-        setTurkishSeries(response.data); 
-      })
-      .catch((error) => {
-        setError("There was an error fetching the turkish series.");
-        console.error("There was an error fetching the turkish series:", error);
-      });
+    // تعيين البيانات مباشرة من db.json
+    if (data) {
+      setMovies(data.moviesarabic || []);
+      setArabicSeries(data.arabic_series || []);
+      setMoviesForeign(data.moviesforeign || []);
+      setTurkishSeries(data.turkish_series || []);
+    } else {
+      setError("There was an error loading the data.");
+    }
   }, []);
 
   if (error) {
@@ -93,7 +61,7 @@ export default function Home() {
                 <div className="movie-card" key={movie.id}>
                   <Link to={`/watch/movie/${movie.id}`} className="movie-link">
                     <img
-                      src={`${BASE_URL}${movie.img}`}
+                      src={movie.img}
                       alt={movie.title}
                       className="movie-img"
                     />
@@ -113,7 +81,7 @@ export default function Home() {
                 <div className="movie-card" key={movie.id}>
                   <Link to={`/watch/movie/${movie.id}`} className="movie-link">
                     <img
-                      src={`${BASE_URL}${movie.img}`}
+                      src={movie.img}
                       alt={movie.title}
                       className="movie-img"
                     />
@@ -136,7 +104,7 @@ export default function Home() {
                     className="series-link"
                   >
                     <img
-                      src={`${BASE_URL}${serie.img}`}
+                      src={serie.img}
                       alt={serie.title}
                       className="movie-img"
                     />
@@ -155,9 +123,11 @@ export default function Home() {
               {turkishSeries.map((serie) => (
                 <div className="movie-card" key={serie.id}>
                   <Link
-                    to={`/series/turkish/${serie.id}/episodes`}className="series-link">
+                    to={`/series/turkish/${serie.id}/episodes`}
+                    className="series-link"
+                  >
                     <img
-                      src={`${BASE_URL}${serie.img}`}
+                      src={serie.img}
                       alt={serie.title}
                       className="movie-img"
                     />

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import { useParams, Link } from "react-router-dom";
+import data from "../../../db.json"; 
 import './Episodes.css';
 
 export default function Episodes() {
@@ -8,27 +8,17 @@ export default function Episodes() {
   const [series, setSeries] = useState(null);
   const [error, setError] = useState(null);
 
-  const BASE_URL = "http://localhost:5001";
-
   useEffect(() => {
-    const endpoint = id.includes('turkish') 
-      ? `${BASE_URL}/turkish_series/${id.replace('turkish_', '')}`
-      : `${BASE_URL}/arabic_series/${id.replace('arabic_', '')}`; 
-  
-    axios
-      .get(endpoint)
-      .then((response) => {
-        const selectedSeries = response.data;
-        if (selectedSeries) {
-          setSeries(selectedSeries);
-        } else {
-          setError("سلسلة غير موجودة.");
-        }
-      })
-      .catch((error) => {
-        setError("حدث خطأ أثناء جلب السلسلة.");
-        console.error(error);
-      });
+    
+    const selectedSeries = id.includes('turkish') 
+      ? data.turkish_series.find(series => series.id === id.replace('turkish_', ''))
+      : data.arabic_series.find(series => series.id === id.replace('arabic_', ''));
+
+    if (selectedSeries) {
+      setSeries(selectedSeries);
+    } else {
+      setError("سلسلة غير موجودة.");
+    }
   }, [id]);
 
   if (error) {
@@ -50,17 +40,17 @@ export default function Episodes() {
             <div className="episodes-list">
               {season.episodes.map((episode) => (
                 <div className="episode-card" key={episode.episode_number}>
-                <Link
-                  to={`/watch/${id.includes('turkish') ? 'turkish' : 'arabic'}/${id}/episode/${season.season_number}/${episode.episode_number}`}
-                  className="series-link"
-                >
-                  <img
-                    src={`${BASE_URL}${episode.img || "/images/default-image.jpg"}`}
-                    alt={episode.title}
-                  />
-                </Link>
-                <p className="episode-number text-bg-dark">الحلقة {episode.episode_number}</p> 
-              </div>
+                  <Link
+                    to={`/watch/${id.includes('turkish') ? 'turkish' : 'arabic'}/${id}/episode/${season.season_number}/${episode.episode_number}`}
+                    className="series-link"
+                  >
+                    <img
+                      src={episode.img || "/images/default-image.jpg"}
+                      alt={episode.title}
+                    />
+                  </Link>
+                  <p className="episode-number text-bg-dark">الحلقة {episode.episode_number}</p> 
+                </div>
               ))}
             </div>
           </div>

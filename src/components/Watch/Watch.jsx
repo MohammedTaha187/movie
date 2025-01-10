@@ -1,40 +1,37 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import { useParams } from "react-router-dom";
+import data from "../../../db.json"; 
 import "./Watch.css";
 
 export default function Watch() {
-  const { type, id } = useParams(); 
+  const { type, id } = useParams();
   const [item, setItem] = useState(null);
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    let endpoint = "";
+    let itemData = null;
 
+    
     if (type === "movie") {
       if (id.startsWith("foreign-")) {
-        endpoint = `http://localhost:5001/moviesforeign/${id}`;
+        itemData = data.moviesforeign.find((movie) => movie.id === id);
       } else {
-        endpoint = `http://localhost:5001/moviesarabic/${id}`;
+        itemData = data.moviesarabic.find((movie) => movie.id === id);
       }
     } else if (type === "series") {
       if (id.includes("turkish")) {
-        endpoint = `http://localhost:5001/turkish_series/${id}`;
+        itemData = data.turkish_series.find((serie) => serie.id === id);
       } else {
-        endpoint = `http://localhost:5001/arabic_series/${id}`;
+        itemData = data.arabic_series.find((serie) => serie.id === id);
       }
     }
 
-    axios
-      .get(endpoint)
-      .then((response) => {
-        setItem(response.data);
-      })
-      .catch((error) => {
-        setError("حدث خطأ أثناء جلب البيانات.");
-        console.error(error);
-      });
-  }, [type, id]);
+    if (itemData) {
+      setItem(itemData); 
+    } else {
+      setError("لم يتم العثور على العنصر.");
+    }
+  }, [type, id, data]);
 
   if (error) {
     return <div className="error-message">{error}</div>;
@@ -49,7 +46,7 @@ export default function Watch() {
       <div
         className="movie-header"
         style={{
-          backgroundImage: `url(http://localhost:5001${item.img})`,
+          backgroundImage: `url(${item.img})`, 
         }}
       >
         <div className="overlay"></div>
@@ -63,7 +60,7 @@ export default function Watch() {
         {type === "movie" && item.video_url && (
           <div className="video-container">
             <video controls>
-              <source src={`http://localhost:5001${item.video_url}`} type="video/mp4" />
+              <source src={item.video_url} type="video/mp4" />
               متصفحك لا يدعم وسم الفيديو.
             </video>
           </div>

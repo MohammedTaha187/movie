@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
+import data from "../../../db.json"; 
 import "./MoviesArabic.css";
 
 export default function MoviesArabic() {
@@ -8,16 +8,13 @@ export default function MoviesArabic() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5001/moviesarabic") 
-      .then((response) => {
-        setMovies(response.data);
-      })
-      .catch((error) => {
-        setError("There was an error fetching the movies.");
-        console.error("There was an error fetching the movies:", error);
-      });
-  }, []);
+    
+    if (data) {
+      setMovies(data.moviesarabic); 
+    } else {
+      setError("There was an error loading the data.");
+    }
+  }, []); 
 
   if (error) {
     return <div className="error-message">{error}</div>;
@@ -34,11 +31,7 @@ export default function MoviesArabic() {
         {movies.map((movie) => (
           <div className="movie-card" key={movie.id}>
             <Link to={`/watch/movie/${movie.id}`} className="movie-link">
-              <img
-                src={`http://localhost:5001${movie.img}`} 
-                alt={movie.title}
-                className="movie-img"
-              />
+              <img src={movie.img} alt={movie.title} className="movie-img" />
             </Link>
             <div className="movie-info">
               <h2 className="movie-title">{movie.title}</h2>

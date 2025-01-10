@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
 import { Link } from "react-router-dom";
+import data from "../../../db.json"; // تأكد من المسار الصحيح للملف
 import "./SeriesArabic.css";
 
 export default function SeriesTurkish() {
@@ -8,24 +8,15 @@ export default function SeriesTurkish() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5001/turkish_series")
-      .then((response) => {
-        setSeries(response.data);
-      })
-      .catch((error) => {
-        setError("There was an error fetching the series.");
-        console.error("There was an error fetching the series:", error);
-      });
-  }, []);
+    if (data) {
+      setSeries(data.turkish_series); // تأكد أن 'turkish_series' موجود في db.json
+    } else {
+      setError("There was an error loading the data.");
+    }
+  }, []); 
 
   if (error) {
-    return (
-      <div className="error-message">
-        <p>{error}</p>
-        <button onClick={() => window.location.reload()}>إعادة المحاولة</button>
-      </div>
-    );
+    return <div className="error-message">{error}</div>;
   }
 
   if (!series.length) {
@@ -44,14 +35,11 @@ export default function SeriesTurkish() {
               to={`/series/turkish/${serie.id}/episodes`}
               className="series-link"
             >
-              <div
-                className="series-image"
-                style={{
-                  backgroundImage: `url(http://localhost:5001${
-                    serie.img || "/images/default-image.jpg"
-                  })`,
-                }}
-              ></div>
+              <img
+                src={serie.img} // تأكد أن 'img' موجود في كل عنصر من عناصر 'turkish_series'
+                alt={serie.title}
+                className="movie-img"
+              />
             </Link>
             <div className="series-info">
               <h2 className="series-title">{serie.title}</h2>

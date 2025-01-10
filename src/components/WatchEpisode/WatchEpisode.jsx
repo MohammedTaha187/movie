@@ -1,32 +1,40 @@
-import React, { useEffect, useState, useRef } from "react";
-import axios from "axios";
+import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import data from "../../../db.json"; 
 import "./WatchEpisode.css";
 
 export default function WatchEpisode() {
   const { type, id, season_number, episode_number } = useParams();
   const [item, setItem] = useState(null);
   const [error, setError] = useState(null);
-  const videoRef = useRef(null);
 
   useEffect(() => {
-    let endpoint = type === "arabic"
-      ? `http://localhost:5001/arabic_series/${id}`
-      : `http://localhost:5001/turkish_series/${id}`;
+    let seriesData = null;
 
-    axios
-      .get(endpoint)
-      .then((response) => {
-        const seriesData = response.data;
-        const season = seriesData.seasons.find((season) => season.season_number === parseInt(season_number));
-        const episode = season.episodes.find((ep) => ep.episode_number === parseInt(episode_number));
-        
+    
+    if (type === "arabic") {
+      seriesData = data.arabic_series.find((serie) => serie.id === id);
+    } else if (type === "turkish") {
+      seriesData = data.turkish_series.find((serie) => serie.id === id);
+    }
+
+    if (seriesData) {
+      
+      const season = seriesData.seasons.find(
+        (season) => season.season_number === parseInt(season_number)
+      );
+      const episode = season?.episodes.find(
+        (ep) => ep.episode_number === parseInt(episode_number)
+      );
+
+      if (episode) {
         setItem({ seriesData, season, episode });
-      })
-      .catch((error) => {
-        setError("There was an error fetching the data.");
-        console.error(error);
-      });
+      } else {
+        setError("لم يتم العثور على الحلقة.");
+      }
+    } else {
+      setError("لم يتم العثور على السلسلة.");
+    }
   }, [type, id, season_number, episode_number]);
 
   if (error) {
@@ -44,7 +52,7 @@ export default function WatchEpisode() {
       <div
         className="episode-header"
         style={{
-          backgroundImage: `url(http://localhost:5001${episode.img || "/images/default-image.jpg"})`,
+          backgroundImage: `url(${episode.img || "/images/default-image.jpg"})`,
         }}
       >
         <div className="overlay"></div>
@@ -56,8 +64,8 @@ export default function WatchEpisode() {
 
       <div className="episode-content">
         <div className="video-container">
-          <video ref={videoRef} key={episode_number} controls>
-            <source src={`http://localhost:5001${episode.video_url}`} type="video/mp4" />
+          <video key={episode_number} controls>
+            <source src={episode.video_url} type="video/mp4" />
             متصفحك لا يدعم علامة الفيديو.
           </video>
         </div>
@@ -75,7 +83,7 @@ export default function WatchEpisode() {
                 <div className="episode-card" key={ep.episode_number}>
                   <Link to={`/watch/${type}/${id}/episode/${season_number}/${ep.episode_number}`}>
                     <img
-                      src={`http://localhost:5001${ep.img || "/images/default-image.jpg"}`}
+                      src={ep.img || "/images/default-image.jpg"}
                       alt={ep.title}
                       className="episode-image"
                     />

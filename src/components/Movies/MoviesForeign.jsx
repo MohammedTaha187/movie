@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import axios from "axios";
+`import data from "../../../db.json"; `
 import { Link } from "react-router-dom";
 import "./MoviesArabic.css";
 
@@ -8,15 +8,11 @@ export default function MoviesForeign() {
   const [error, setError] = useState(null);
 
   useEffect(() => {
-    axios
-      .get("http://localhost:5001/moviesforeign")
-      .then((response) => {
-        setMovies(response.data);
-      })
-      .catch((error) => {
-        setError("There was an error fetching the movies.");
-        console.error("There was an error fetching the movies:", error);
-      });
+    if (data) {
+      setMovies(data.moviesforeign);  
+    } else {
+      setError("There was an error loading the movies data.");
+    }
   }, []);
 
   if (error) {
@@ -35,7 +31,7 @@ export default function MoviesForeign() {
           <div className="movie-card" key={movie.id}>
             <Link to={`/watch/movie/${movie.id}`} className="movie-link">
               <img
-                src={`http://localhost:5001${movie.img}`}
+                src={movie.img} 
                 alt={movie.title}
                 className="movie-img"
               />
